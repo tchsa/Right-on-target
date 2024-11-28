@@ -23,14 +23,10 @@ class ViewController: UIViewController {
    @IBAction func checkNumber() {
       // если игра только начинается
       if self.round == 0 {
-         // генерируем случайное число
          self.number = Int.random(in: 1...50)
-         // передаем значение случайного числа в label
          self.label.text = String(self.number)
-         // устанавливаем счетчик раундов на 1
          self.round = 1
       } else {
-         // получаем значение на слайдере
          let numSlider = Int(self.slider.value.rounded())
          // сравниваем значение с загаданным
          // и подсчитываем очки
